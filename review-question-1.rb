@@ -1,5 +1,7 @@
 ## QUESTION 1
 
+
+
 pokemon = [
   {
     "id": 1,
@@ -59,6 +61,27 @@ pokemon = [
   ]
 }
 ]
+
+
+pokemon[0][:abilities][0][:ability][:url]
+
+(pokemon.find do |poke|
+    poke[:base_experience] > 40
+end)
+
+
+mons = pokemon.select do |poke|
+    poke[:base_experience] > 40
+end
+
+mon_names = pokemon.map do |poke|
+    poke[:name]
+end
+
+any_poke = pokemon.any? do |poke|
+    poke[:weight] > 60
+end
+
 
 
 # How would you get the url for Bulbasaur's ability?
